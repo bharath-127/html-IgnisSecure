@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Management - Diwali Crackers</title>
+    <link rel="stylesheet" href="diwali.css">
+</head>
+<body>
+
+    <!-- Header Section (Optional if you're integrating with existing header) -->
+    <header>
+        <div class="logo">IgnisSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="#license-section">License Module</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- License Module Section -->
+    <section id="license-section">
+        <div class="container">
+            <h2>Diwali Cracker License Management</h2>
+            <p>Manage your license applications, track status, and schedule inspections for selling Diwali crackers.</p>
+
+            <!-- License Application Form -->
+            <div class="license-form">
+                <h3>Apply for License</h3>
+                <form id="inspectionReq" action="submit_license.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="business_name">Business Name:</label>
+                        <input type="text" id="business_name" name="business_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="owner_name">Owner Name:</label>
+                        <input type="text" id="owner_name" name="owner_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Business Location:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fire_certificate">Fire Safety Certificate (Upload):</label>
+                        <input type="file" id="fire_certificate" name="fire_certificate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="noc_document">NOC Document (Upload):</label>
+                        <input type="file" id="noc_document" name="noc_document" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- License Tracking Section -->
+            <div class="license-status">
+                <h3>Track Your License</h3>
+                <form action="track_license.php" method="GET">
+                    <div class="form-group">
+                        <label for="license_number">Enter License Number:</label>
+                        <input type="text" id="license_number" name="license_number" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Track Status</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- License Renewal Reminder -->
+            <div class="renewal-reminder">
+                <h3>Renew Your License</h3>
+                <form action="renew_license.php" method="POST">
+                    <div class="form-group">
+                        <label for="license_number_renew">License Number:</label>
+                        <input type="text" id="license_number_renew" name="license_number_renew" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Request Renewal</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <p>© 2024 IgnisSecure. All rights reserved.</p>
+        
+
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('inspectionReq').addEventListener('submit', function(event) {
+            // Optional: Custom validation or processing can be done here
+            alert('Your License request has been submitted successfully!');
+            
+            // You can add any additional logic here if necessary
+        });
+    </script>
+
+</body>
+</html>
